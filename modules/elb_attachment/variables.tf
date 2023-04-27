@@ -10,3 +10,8 @@ variable "instances" {
   description = "List of instances ID to place in the ELB pool"
   type        = "list"
 }
+
+variable "create_elb" {
+  description = "Create the elb or not"
+  default     = true
+} 

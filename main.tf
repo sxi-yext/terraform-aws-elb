@@ -4,6 +4,7 @@
 module "elb" {
   source = "./modules/elb"
 
+  create_elb = "${var.create_elb}"
   name = "${var.name}"
 
   subnets         = ["${var.subnets}"]
@@ -28,6 +29,7 @@ module "elb" {
 module "elb_attachment" {
   source = "./modules/elb_attachment"
 
+  create_elb = "${var.create_elb}"
   number_of_instances = "${var.number_of_instances}"
 
   elb       = "${module.elb.this_elb_id}"

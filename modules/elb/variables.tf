@@ -56,3 +56,8 @@ variable "health_check" {
   description = "A health check block"
   type        = "list"
 }
+
+variable "create_elb" {
+  description = "Create the elb or not"
+  default     = true
+} 

@@ -1,4 +1,5 @@
 resource "aws_elb" "this" {
+  count = "${var.create_elb ? 1 : 0}"
   name            = "${var.name}"
   subnets         = ["${var.subnets}"]
   internal        = "${var.internal}"
