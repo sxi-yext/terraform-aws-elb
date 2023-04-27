@@ -4,6 +4,8 @@
 module "elb" {
   source = "./modules/elb"
 
+  create_elb = "${var.create_elb}"
+
   name = "${var.name}"
 
   subnets         = ["${var.subnets}"]

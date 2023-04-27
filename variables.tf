@@ -67,3 +67,8 @@ variable "instances" {
   type        = "list"
   default     = []
 }
+
+variable "create_elb" {
+  description = "Create the elb or not"
+  default     = true
+} 
